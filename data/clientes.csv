@@ -1,0 +1,11 @@
+ClienteId,Nome,Sobrenome,DataNascimento,Bairro,Idade,Endereco,lat,long,Telefone,Email,Sexo
+C1,Cliente 1,Silva 1,1996-01-20,Centro,26,"Nossa Senhora da Conceição, Paulista - PE, Brazil",-7.885723,-34.8295,956995142,bxfxvlfl@live.com,M
+C2,Cliente 2,Silva 2,1984-11-23,Timbó,37,"Rua Alagoinha, 870 - Janga, Paulista - PE, Brazil",-7.940049,-34.82907,953477302,poervbrv@gmail.com,M
+C3,Cliente 3,Silva 3,1991-07-04,Caetés Velho,31,"Pau Amarelo, Paulista - PE, Brazil",-7.909783,-34.83318,960561219,xmgzrpca@hotmail.com,F
+C4,Cliente 4,Silva 4,1971-01-23,Caetés I,51,"Rua Major Jener Tenório de Holanda - Vila Torres Galvao, Paulista - PE, Brazil",-7.954404,-34.87083,993305431,wvtzmevj@live.com,F
+C5,Cliente 5,Silva 5,1996-12-12,Caetés II,25,"Nossa Senhora do Ó, Paulista - PE, Brazil",-7.893175,-34.83269,981696932,iytvhmaw@ufrpe.br,F
+C6,Cliente 6,Silva 6,1996-10-23,Caetés III,25,"Rua Solmar, 1591 - Janga, Paulista - PE, Brazil",-7.921174,-34.82015,944332935,mfavgurn@gmail.com,M
+C7,Cliente 7,Silva 7,1976-03-12,Zona Rural,46,"Rua Amazonita - Nossa Senhora da Conceição, Paulista - PE, Brazil",-7.883278,-34.82822,932598758,pvwlugtt@ufrpe.br,F
+C8,Cliente 8,Silva 8,1978-08-31,Planalto,43,"Rua Aureliano Artur Soares Quintas, 51 - Janga, Paulista - PE, Brazil",-7.934068,-34.82619,976253378,vygxlsvu@yahoo.com.br,M
+C9,Cliente 9,Silva 9,1974-04-23,Pitanga,48,"Avenida Antônio Cabral de Souza, 1175 - Vila Torres Galvao, Paulista - PE, Brazil",-7.944923,-34.86806,968935750,cxikcjie@hotmail.com,F
+C10,Cliente 10,Silva 10,1973-09-23,Fosfato,48,"Janga, Paulista - PE, Brazil",-7.937886,-34.82969,923686137,ibpjcykd@ufrpe.br,M
