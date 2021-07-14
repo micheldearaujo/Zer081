@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c4e8be-0f16-4a36-a1d5-9b62fad5bc52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.RData" beforeDir="false" afterPath="$PROJECT_DIR$/.RData" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rhistory" beforeDir="false" afterPath="$PROJECT_DIR$/.Rhistory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/pcs/files-pane.pper" beforeDir="false" afterPath="$PROJECT_DIR$/.Rproj.user/7391F025/pcs/files-pane.pper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/pcs/workbench-pane.pper" beforeDir="false" afterPath="$PROJECT_DIR$/.Rproj.user/7391F025/pcs/workbench-pane.pper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/sources/per/t/5E26F112" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/sources/per/t/5E26F112-contents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/sources/per/t/6AD27672" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/sources/per/t/6AD27672-contents" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/sources/prop/INDEX" beforeDir="false" afterPath="$PROJECT_DIR$/.Rproj.user/7391F025/sources/prop/INDEX" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/viewer-cache/3DEF7DF5.Rdata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.Rproj.user/shared/notebooks/paths" beforeDir="false" afterPath="$PROJECT_DIR$/.Rproj.user/shared/notebooks/paths" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/vendas_081.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/vendas_081.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generateInformation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rGenerateInformation.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.Rproj.user/7391F025/pcs/source-pane.pper" beforeDir="false" afterPath="$PROJECT_DIR$/.Rproj.user/7391F025/pcs/source-pane.pper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExploratoryDataAnalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ExploratoryDataAnalysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeradorClientes.py" beforeDir="false" afterPath="$PROJECT_DIR$/GeradorClientes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +25,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="GeradorClientes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

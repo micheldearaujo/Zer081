@@ -70,7 +70,7 @@ def data_wrangling(sales):
     return sales
 
 
-def makePlots(sales):
+def make_plots(sales):
     # Making a bar plot of total price by region
     sales_by_region = sales.groupby(by='Region', as_index=False).sum().sort_values(by='Price')
 
@@ -103,7 +103,8 @@ def makePlots(sales):
     msg = config_email(image_name)
     send_email(msg)
 
+
 sales = load_data('./data/Vendas.csv')
 sales = data_wrangling(sales)
-makePlots(sales)
+make_plots(sales)
 

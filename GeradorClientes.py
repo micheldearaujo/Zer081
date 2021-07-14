@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 import math
 
 
-file='./data/clientes.csv'
+file = './data/clientes.csv'
 
 
 # ---- Gerando informações aleatórias de clientes
 clientesid, nomes, sobrenomes, datas, enderecos, bairros = list(), list(), list(), list(), list(), list()
 
 
-def Gerar_Clientes():
+def gerar_clientes():
     for k in range(1, 11):
         # Gerando o ID
         clientesid.append(f'C{k}')
@@ -38,9 +38,8 @@ def Gerar_Clientes():
         datas.append(random_date)
 
 
-
 # Criando o dataframe
-def Criar_Dataframe():
+def criar_dataframe():
     # Definindo o nome dos bairros
     bairros = ['Centro', 'Timbó', 'Caetés Velho', 'Caetés I', 'Caetés II', 'Caetés III', 'Zona Rural', 'Planalto',
                'Pitanga',
@@ -48,13 +47,15 @@ def Criar_Dataframe():
     clientes = pd.DataFrame(list(zip(clientesid, nomes, sobrenomes, datas, bairros)), columns=['ClienteId', 'Nome', 'Sobrenome', 'DataNascimento', 'Bairro'])
     return clientes
 
+
 # Extraindo a idade a partir da data de nascimento - subtrai a data x do dia de hoje e retira o dia/365
-def Extrair_Idade(clientes):
+def extrair_idade(clientes):
     clientes['Idade'] = clientes['DataNascimento'].apply(lambda x: math.ceil((datetime.datetime.now().date() - x).days/365))
     return clientes
 
+
 # Carregando alguns enderecos aleatórios do projeto de R
-def Criar_Enderecos(clientes):
+def criar_enderecos(clientes):
     enderecos = pd.read_csv('D:\\michel\\Universidade\\Mestrado\\disciplina\\repo\\2_VA\\ProjetoFinal/imoveis.csv', encoding='latin-1')
 
     # Filtrando 10 endereços diferentes em Paulista. Infelizmente todos eles ficam muito longe de Abreu e Lima
@@ -65,17 +66,20 @@ def Criar_Enderecos(clientes):
     clientes[['Endereco', 'lat', 'long']] = enderecos[['Endereco', 'lat', 'long']].values
     return clientes
 
+
 # Salvando o novo dataset com endereços
-def Salvar_Dataframe(clientes, path):
+def salvar_dataframe(clientes, path):
     clientes.to_csv(path, index=False, encoding='latin-1')
 
+
 # Recarregando o dataset e adicionando informações de contato: Email e Telefone
-def Load_Dataframe(path):
+def load_dataframe(path):
     clientes = pd.read_csv('./data/clientes.csv', encoding='latin-1')
     return clientes
 
+
 # Gerando números de telefones aleatórios:
-def Gerar_Contatos(clientes):
+def gerar_contatos(clientes):
 
     # Gerando telefones
     clientes['Telefone'] = [int('9' + str(np.random.randint(10000000, 99999999))) for k in range(10)]
@@ -95,11 +99,12 @@ def Gerar_Contatos(clientes):
 
 # Executando o código
 
-Gerar_Clientes()
-clientes = Criar_Dataframe()
-clientes = Extrair_Idade(clientes)
-clientes = Criar_Enderecos(clientes)
-clientes = Gerar_Contatos(clientes)
-#clientes = Salvar_Dataframe(clientes, file)
+
+gerar_clientes()
+clientes = criar_dataframe()
+clientes = extrair_idade(clientes)
+clientes = criar_enderecos(clientes)
+clientes = gerar_contatos(clientes)
+# clientes = Salvar_Dataframe(clientes, file)
 
 print(clientes.head(10))
