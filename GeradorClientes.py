@@ -13,10 +13,11 @@ file = './data/clientes.csv'
 
 # ---- Gerando informações aleatórias de clientes
 clientesid, nomes, sobrenomes, datas, enderecos, bairros = list(), list(), list(), list(), list(), list()
+n_clientes = 10
 
 
 def gerar_clientes():
-    for k in range(1, 11):
+    for k in range(1, n_clientes+1):
         # Gerando o ID
         clientesid.append(f'C{k}')
 
@@ -41,10 +42,7 @@ def gerar_clientes():
 # Criando o dataframe
 def criar_dataframe():
     # Definindo o nome dos bairros
-    bairros = ['Centro', 'Timbó', 'Caetés Velho', 'Caetés I', 'Caetés II', 'Caetés III', 'Zona Rural', 'Planalto',
-               'Pitanga',
-               'Fosfato']
-    clientes = pd.DataFrame(list(zip(clientesid, nomes, sobrenomes, datas, bairros)), columns=['ClienteId', 'Nome', 'Sobrenome', 'DataNascimento', 'Bairro'])
+    clientes = pd.DataFrame(list(zip(clientesid, nomes, sobrenomes, datas)), columns=['ClienteId', 'Nome', 'Sobrenome', 'DataNascimento'])
     return clientes
 
 
@@ -60,7 +58,7 @@ def criar_enderecos(clientes):
 
     # Filtrando 10 endereços diferentes em Paulista. Infelizmente todos eles ficam muito longe de Abreu e Lima
     # Talvez eu colete mais dados de Abreu e Lima
-    enderecos = enderecos[(enderecos['Estado']=='PE') & (enderecos['Cidade'] == 'Paulista')].dropna()[:10]
+    enderecos = enderecos[(enderecos['Estado']=='PE') & (enderecos['Cidade'] == 'Paulista')].dropna()[:n_clientes]
 
     # Adicionando os endereços ao dataframe dos clientes
     clientes[['Endereco', 'lat', 'long']] = enderecos[['Endereco', 'lat', 'long']].values
@@ -82,19 +80,20 @@ def load_dataframe(path):
 def gerar_contatos(clientes):
 
     # Gerando telefones
-    clientes['Telefone'] = [int('9' + str(np.random.randint(10000000, 99999999))) for k in range(10)]
+    clientes['Telefone'] = [int('9' + str(np.random.randint(10000000, 99999999))) for k in range(n_clientes)]
 
     # Gerando Emails aleatórios
-    alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     emails = ['gmail.com', 'hotmail.com', 'yahoo.com.br', 'live.com', 'ufrpe.br']
-    string = [[alfabeto[np.random.randint(0, len(alfabeto))] for k in range(8)] for l in range(10)]
-    for i in range(10):
+    string = [[alfabeto[np.random.randint(0, len(alfabeto))] for k in range(8)] for l in range(n_clientes)]
+    for i in range(n_clientes):
         string[i] = ''.join(string[i])
         string[i] = string[i] + '@' + emails[np.random.randint(len(emails))]
     clientes['Email'] = string
 
     # Gerando Sexos
-    clientes['Sexo'] = [['F', 'M'][np.random.randint(2)] for h in range(10)]
+    clientes['Sexo'] = [['F', 'M'][np.random.randint(2)] for h in range(n_clientes)]
     return clientes
 
 # Executando o código
